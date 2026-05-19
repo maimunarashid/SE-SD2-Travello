@@ -11,7 +11,10 @@
      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
-<div class="relative max-w-[1400px] mx-auto">
+
+
+
+<body class="relative max-w-[1400px] mx-auto">
     <!-- navbar -->
  <header class="bg-white p-4 shadow-md text-black pl-5 pr-5">
     <div class="container mx-auto flex items-center justify-between">
@@ -20,10 +23,10 @@
         </div>
 
         <ul class="flex gap-10 text-black pt-3 pb-3 pl-5 pr-5 rounded-1 transition duration-300 ease-in-out">
-            <li class="hover:text-blue-500"><a href="index.html">Home</a></li>
-            <li class="hover:text-blue-500"><a href="package.html">Package</a></li>
-            <li class="hover:text-blue-500"><a href="booking.html">Booking</a></li>
-            <li class="hover:text-blue-500"><a href="#destination">Explore</a></li>
+            <li  class="hover:text-blue-500"><a href="index.html">Home</a></li>
+            <li  class="hover:text-blue-500"><a href="package.html">Package</a></li>
+            <li  class="hover:text-blue-500"><a href="booking.html">Booking</a></li>
+            <li  class="hover:text-blue-500"><a href="#destination">Explore</a></li>
         </ul>
         <ul class="flex justify-end gap-2">
             <li><a href="login.html"><button class="btn hover:bg-blue-500 hover:text-white bg-white text-blue-500">Login</button></a></li>
@@ -32,43 +35,22 @@
       </div>
 </header>
 
+<!-- inside body -->
+<div class="max-w-[1200px] mx-auto mt-15 mb-15">
+ 
 
 
+    <h1 class="text-3xl font-bold mb-4 text-gray-500 text-center">
+      My Bookings
+    </h1>
+    <p class="text-gray-400 text-center mb-10 text-xl">
+  View and manage all your travel bookings in one place
+</p>
+
+    <div id="list" class="grid gap-4"></div>
 
 
-<!-- login -->
- <div class="min-h-screen bg-cover bg-center flex items-center justify-center">
-  <!-- Login Card -->
-  <div class="bg-white/70 backdrop-blur-md p-8 rounded-lg shadow-lg w-full max-w-md">
-    <!-- Heading -->
-    <h2 class="text-2xl font-bold mb-2 text-center">Please Sign in</h2>
-    <p class="text-gray-600 mb-6 text-center">You need to Sign in first to continue</p>
-
-    <!-- Input Fields -->
-    <form>
-      <input type="email" placeholder="Email" class="w-full mb-4 px-4 py-2 border rounded focus:outline-none focus:ring-pink-400">
-      <input type="password" placeholder="Password" class="w-full mb-2 px-4 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-pink-400">
-      <a href="#" class="text-sm text-blue-500 hover:underline block mb-4 text-right">Forgot Password?</a>
-
-      <!-- Sign In Button -->
-      <button class="w-full bg-blue-500 text-white font-semibold py-2 rounded">Sign In</button>
-    </form>
-
-    <!-- Social Login -->
-    <div class="flex items-center my-6">
-      <hr class="flex-grow border-gray-300">
-      <hr class="flex-grow border-gray-300">
-    </div>
-
-    <!-- Sign Up Link -->
-    <p class="mt-6 text-gray-700 text-sm text-center">
-      Don't have an account? 
-      <a href="signup.html" class="text-blue-500 font-semibold hover:underline">Sign Up</a>
-    </p>
-  </div>
 </div>
-
-
 
 
 
@@ -133,5 +115,9 @@
 
 
 
-</div>
+
+<script src="booking.js"></script>
+
+</body>
+
 </html>

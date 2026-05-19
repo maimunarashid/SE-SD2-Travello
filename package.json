@@ -1,0 +1,315 @@
+{
+  "packages": [
+    {
+      "id": 1,
+      "name": "Nilgiri Hill & Bandarban City Tour",
+      "district": "Bandarban",
+      "image": "https://i.ibb.co.com/jZjLNLtn/Nilgiri-Hill-Bandarban-City.jpg",
+      "description": "Experience the breathtaking Nilgiri hills and explore Bandarban city attractions.",
+      "price_per_adult_bdt": 7500,
+      "overview": "2 Days, 1 Night covering Nilgiri, Meghla, and Bandarban city.",
+      "includes": ["AC Bus Transport", "Hotel Stay", "Breakfast & Dinner", "Tour Guide"],
+      "excludes": ["Lunch", "Personal Shopping", "Entry Fees"],
+      "itinerary": {
+        "day1": {
+          "title": "Dhaka to Bandarban",
+          "details": "Depart from Dhaka, check-in hotel, evening visit to Meghla tourist spot."
+        },
+        "day2": {
+          "title": "Nilgiri Hills & City Tour",
+          "details": "Morning trip to Nilgiri hills, explore Bandarban city, return journey."
+        }
+      },
+      "food": {
+        "breakfast": "Paratha, Egg, Tea",
+        "dinner": "Rice, Chicken Curry, Vegetables"
+      },
+      "hotels": [
+        {
+          "name": "Hotel Green Hill",
+          "type": "Standard",
+          "amenities": ["WiFi", "AC Room", "Restaurant"]
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Nafakhum Waterfall Adventure",
+      "district": "Bandarban",
+      "image": "https://i.ibb.co.com/FkWxM3jt/Nafakhum-Waterfal.webp",
+      "description": "Trek through the hills and enjoy the majestic Nafakhum waterfall.",
+      "price_per_adult_bdt": 9500,
+      "overview": "3 Days, 2 Nights trekking adventure.",
+      "includes": ["Bus Transport", "Resort Stay", "Breakfast & Dinner", "Local Guide"],
+      "excludes": ["Lunch", "Personal Expenses"],
+      "itinerary": {
+        "day1": {
+          "title": "Arrival & Preparation",
+          "details": "Reach Bandarban, check-in resort, prepare for trekking."
+        },
+        "day2": {
+          "title": "Nafakhum Trek",
+          "details": "Full-day trek to Nafakhum waterfall, enjoy nature, return to resort."
+        },
+        "day3": {
+          "title": "Local Market & Departure",
+          "details": "Morning visit to tribal market, return journey."
+        }
+      },
+      "food": {
+        "breakfast": "Khichuri, Egg, Tea",
+        "dinner": "Rice, Beef Curry, Vegetables"
+      },
+      "hotels": [
+        {
+          "name": "Hill View Resort",
+          "type": "Deluxe",
+          "amenities": ["WiFi", "AC Room", "Restaurant", "Balcony View"]
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "name": "Bandarban Tribal Culture Tour",
+      "district": "Bandarban",
+      "image": "https://i.ibb.co.com/ntNkQWp/Bandarban-Tribal-Culture-Tour.webp",
+      "description": "Discover the rich tribal culture, traditions, and lifestyle of Bandarban.",
+      "price_per_adult_bdt": 8800,
+      "overview": "2 Days, 2 Nights cultural exploration.",
+      "includes": ["Transport", "Hotel Stay", "Breakfast & Dinner", "Cultural Guide"],
+      "excludes": ["Lunch", "Personal Shopping"],
+      "itinerary": {
+        "day1": {
+          "title": "Arrival & Tribal Village Visit",
+          "details": "Reach Bandarban, visit tribal villages, cultural activities."
+        },
+        "day2": {
+          "title": "Local Crafts & Departure",
+          "details": "Explore local crafts market, enjoy cultural show, return journey."
+        }
+      },
+      "food": {
+        "breakfast": "Rice Cake, Tea",
+        "dinner": "Rice, Fish Curry, Vegetables"
+      },
+      "hotels": [
+        {
+          "name": "Bandarban Eco Lodge",
+          "type": "Eco-Friendly",
+          "amenities": ["WiFi", "Restaurant", "Nature View"]
+        }
+      ]
+    },
+
+    {
+             "id": 4,
+      "name": "Kaptai Lake Cruise & Hanging Bridge",
+      "district": "Rangamati",
+      "image": "https://i.ibb.co.com/Q7TCHyL7/Kaptai-Lake-Cruise-Hanging-Bridge.webp",
+      "description": "Enjoy a scenic boat cruise on Kaptai Lake and visit the famous Hanging Bridge.",
+      "price_per_adult_bdt": 7200,
+      "overview": "2 Days, 1 Night covering Kaptai Lake, Hanging Bridge, and tribal villages.",
+      "includes": ["AC Bus Transport", "Boat Ride", "Hotel Stay", "Breakfast & Dinner", "Tour Guide"],
+      "excludes": ["Lunch", "Personal Shopping"],
+      "itinerary": {
+        "day1": {
+          "title": "Dhaka to Rangamati",
+          "details": "Depart from Dhaka, check-in hotel, evening boat ride on Kaptai Lake."
+        },
+        "day2": {
+          "title": "Hanging Bridge & Tribal Village",
+          "details": "Morning visit to Hanging Bridge, explore tribal village, return journey."
+        }
+      },
+      "food": {
+        "breakfast": "Paratha, Egg, Tea",
+        "dinner": "Rice, Chicken Curry, Vegetables"
+      },
+      "hotels": [
+        {
+          "name": "Parjatan Motel Rangamati",
+          "type": "Standard",
+          "amenities": ["WiFi", "Restaurant", "Lake View"]
+        }
+      ] 
+    },
+    {
+         "id": 5,
+      "name": "Rangamati Tribal Culture & Market Tour",
+      "district": "Rangamati",
+      "image": "https://i.ibb.co.com/6J7PkwqM/Rangamati-Tribal-Culture-Market-Tour.jpg",
+      "description": "Discover tribal lifestyle, crafts, and Rangamati local market.",
+      "price_per_adult_bdt": 8000,
+      "overview": "2 Days, 2 Nights cultural exploration.",
+      "includes": ["Transport", "Hotel Stay", "Breakfast & Dinner", "Cultural Guide"],
+      "excludes": ["Lunch", "Personal Expenses"],
+      "itinerary": {
+        "day1": {
+          "title": "Arrival & Tribal Village Visit",
+          "details": "Reach Rangamati, visit tribal villages, cultural activities."
+        },
+        "day2": {
+          "title": "Local Market & Departure",
+          "details": "Explore Rangamati market, enjoy cultural show, return journey."
+        }
+      },
+      "food": {
+        "breakfast": "Rice Cake, Tea",
+        "dinner": "Rice, Fish Curry, Vegetables"
+      },
+      "hotels": [
+        {
+          "name": "Hotel Lake View",
+          "type": "Eco-Friendly",
+          "amenities": ["WiFi", "Restaurant", "Nature View"]
+        }
+      ]
+    },
+    {
+        "id": 6,
+      "name": "Alutila Cave & Risang Waterfall Tour",
+      "district": "Khagrachari",
+      "image": "https://i.ibb.co.com/tT3jFZFL/Alutila-Cave-Risang-Waterfall-Tour.jpg",
+      "description": "Explore the mysterious Alutila Cave and enjoy the scenic Risang Waterfall in Khagrachari.",
+      "price_per_adult_bdt": 7800,
+      "overview": "2 Days, 1 Night adventure covering Alutila Cave, Risang Waterfall, and tribal villages.",
+      "includes": [
+        "AC Bus Transport",
+        "Hotel Accommodation",
+        "Breakfast & Dinner",
+        "Tour Guide"
+      ],
+      "excludes": [
+        "Lunch",
+        "Personal Expenses",
+        "Entry Fees"
+      ],
+      "itinerary": {
+        "day1": {
+          "title": "Dhaka to Khagrachari",
+          "details": "Depart from Dhaka, check-in hotel, evening visit to Alutila Cave."
+        },
+        "day2": {
+          "title": "Risang Waterfall & Departure",
+          "details": "Morning trip to Risang Waterfall, explore tribal village, return journey."
+        }
+      },
+      "food": {
+        "breakfast": "Paratha, Egg, Tea",
+        "dinner": "Rice, Chicken Curry, Vegetables"
+      },
+       "hotels": [
+        {
+          "name": "Hotel Mount Inn",
+          "type": "Standard",
+          "amenities": ["WiFi", "AC Room", "Restaurant"]
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "name": "Beach Relaxation Tour",
+      "district": "Cox’s Bazar",
+      "image": "https://i.ibb.co.com/X9DQMzs/Saint-Martin.jpg",
+      "description": "Relax at the world’s longest sea beach with sunset views.",
+      "price_per_adult_bdt": 6500,
+      "overview": "2 Days, 1 Night beach relaxation.",
+      "includes": ["AC Bus Transport", "Hotel Stay", "Breakfast & Dinner"],
+      "excludes": ["Lunch", "Personal Shopping"],
+      "itinerary": {
+        "day1": {"title": "Arrival & Beach Walk","details": "Reach Cox’s Bazar, check-in hotel, evening beach walk."},
+        "day2": {"title": "Sunrise & Departure","details": "Morning sunrise view, local market visit, return journey."}
+      },
+      "food": {"breakfast": "Paratha, Egg, Tea","dinner": "Rice, Fish Curry, Vegetables"},
+      "hotels": [{"name": "Hotel Sea Crown","type": "Standard","amenities": ["WiFi","AC Room","Restaurant"]}]
+    },
+    {
+      "id": 8,
+      "name": "Inani Beach & Himchari Tour",
+      "district": "Cox’s Bazar",
+      "image": "https://i.ibb.co.com/Z1k3w48B/Inani-Beach-Himchari-Tour.jpg",
+      "description": "Explore Inani Beach’s coral stones and Himchari hills.",
+      "price_per_adult_bdt": 7800,
+      "overview": "2 Days, 2 Nights adventure.",
+      "includes": ["Transport","Hotel Stay","Breakfast & Dinner","Tour Guide"],
+      "excludes": ["Lunch","Entry Fees"],
+      "itinerary": {
+        "day1": {"title": "Arrival & Himchari","details": "Check-in hotel, evening trip to Himchari hills."},
+        "day2": {"title": "Inani Beach","details": "Morning trip to Inani Beach, enjoy coral stones, return journey."}
+      },
+      "food": {"breakfast": "Khichuri, Egg, Tea","dinner": "Rice, Chicken Curry, Vegetables"},
+      "hotels": [{"name": "Hotel Ocean Paradise","type": "Deluxe","amenities": ["WiFi","AC Room","Restaurant","Sea View"]}]
+    },
+    {
+      "id": 9,
+      "name": "Saint Martin’s Island Tour",
+      "district": "Cox’s Bazar",
+      "image": "https://i.ibb.co.com/X9DQMzs/Saint-Martin.jpg",
+      "description": "Visit the only coral island of Bangladesh, Saint Martin’s.",
+      "price_per_adult_bdt": 12000,
+      "overview": "3 Days, 2 Nights island adventure.",
+      "includes": ["Bus Transport","Ship Ride","Resort Stay","Breakfast & Dinner"],
+      "excludes": ["Lunch","Personal Expenses"],
+      "itinerary": {
+        "day1": {"title": "Dhaka to Teknaf","details": "Depart Dhaka, reach Teknaf, overnight stay."},
+        "day2": {"title": "Saint Martin’s","details": "Ship ride to Saint Martin’s, explore island, stay at resort."},
+        "day3": {"title": "Return Journey","details": "Morning beach walk, return by ship and bus."}
+      },
+      "food": {"breakfast": "Rice Cake, Tea","dinner": "Seafood, Rice, Vegetables"},
+      "hotels": [{"name": "Saint Martin Resort","type": "Eco-Friendly","amenities": ["WiFi","Restaurant","Beach View"]}]
+    },
+    {
+      "id": 10,
+      "name": "Cox’s Bazar Luxury Holiday",
+      "district": "Cox’s Bazar",
+      "image": "https://i.ibb.co.com/8RwQMcG/Cox-s-Bazar.jpg",
+      "description": "Enjoy a luxury holiday with premium hotels and private beach access.",
+      "price_per_adult_bdt": 18000,
+      "overview": "3 Days, 2 Nights luxury stay.",
+      "includes": ["Private Transport","5-Star Hotel","Breakfast, Lunch & Dinner","Spa Access"],
+      "excludes": ["Personal Shopping"],
+      "itinerary": {
+        "day1": {"title": "Arrival & Luxury Stay","details": "Check-in 5-star hotel, evening beach relaxation."},
+        "day2": {"title": "Private Beach & Spa","details": "Full-day private beach access, spa treatment."},
+        "day3": {"title": "Shopping & Departure","details": "Morning shopping, return journey."}
+      },
+      "food": {"breakfast": "Continental Buffet","dinner": "Seafood Platter, Desserts"},
+      "hotels": [{"name": "Sayeman Beach Resort","type": "Luxury","amenities": ["WiFi","AC Room","Restaurant","Private Beach","Spa"]}]
+    },
+    {
+      "id": 11,
+      "name": "Cox’s Bazar Family Package",
+      "district": "Cox’s Bazar",
+      "image": "https://i.ibb.co.com/1f4pdLJG/cox-s-family-package.jpg",
+      "description": "Perfect family holiday with kids-friendly activities.",
+      "price_per_adult_bdt": 9500,
+      "overview": "2 Days, 2 Nights family-friendly trip.",
+      "includes": ["Transport","Hotel Stay","Breakfast & Dinner","Kids Activities"],
+      "excludes": ["Lunch","Personal Shopping"],
+      "itinerary": {
+        "day1": {"title": "Arrival & Beach Fun","details": "Check-in hotel, evening beach games for kids."},
+        "day2": {"title": "Local Attractions","details": "Visit Himchari & Inani, return journey."}
+      },
+      "food": {"breakfast": "Bread, Butter, Juice","dinner": "Rice, Chicken Curry, Vegetables"},
+      "hotels": [{"name": "Hotel Sea Pearl","type": "Family","amenities": ["WiFi","AC Room","Restaurant","Kids Zone"]}]
+    },
+    {
+      "id": 12,
+      "name": "Cox’s Bazar Honeymoon Package",
+      "district": "Cox’s Bazar",
+      "image": "https://i.ibb.co.com/jv1KTDnk/coxs-honeymoon.jpg",
+      "description": "Romantic honeymoon package with candlelight dinner and sea view rooms.",
+      "price_per_adult_bdt": 15000,
+      "overview": "3 Days, 2 Nights romantic holiday.",
+      "includes": ["Private Transport","Resort Stay","Breakfast & Dinner","Candlelight Dinner"],
+      "excludes": ["Lunch","Personal Shopping"],
+      "itinerary": {
+        "day1": {"title": "Arrival & Romantic Dinner","details": "Check-in resort, evening candlelight dinner."},
+        "day2": {"title": "Beach Walk & Spa","details": "Morning beach walk, spa treatment, sunset view."},
+        "day3": {"title": "Shopping & Departure","details": "Local shopping, return journey."}
+      },
+      "food": {"breakfast": "Continental Buffet","dinner": "Romantic Candlelight Dinner"},
+      "hotels": [{"name": "Long Beach Hotel","type": "Luxury","amenities": ["WiFi","AC Room","Restaurant","Sea View","Spa"]}]
+    }
+  ]
+}

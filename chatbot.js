@@ -2,6 +2,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
 const API_KEY = "";
 
+
+
   const chatToggle = document.getElementById("chat-toggle");
   const chatbox = document.getElementById("chatbox");
   const sendBtn = document.getElementById("send-btn");

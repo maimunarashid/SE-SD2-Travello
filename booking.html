@@ -14,7 +14,7 @@
 
 
 
-<div class="relative max-w-[1400px] mx-auto">
+<body class="relative max-w-[1400px] mx-auto">
     <!-- navbar -->
  <header class="bg-white p-4 shadow-md text-black pl-5 pr-5">
     <div class="container mx-auto flex items-center justify-between">
@@ -35,44 +35,22 @@
       </div>
 </header>
 
+<!-- inside body -->
+<div class="max-w-[1200px] mx-auto mt-15 mb-15">
+ 
 
 
+    <h1 class="text-3xl font-bold mb-4 text-gray-500 text-center">
+      My Bookings
+    </h1>
+    <p class="text-gray-400 text-center mb-10 text-xl">
+  View and manage all your travel bookings in one place
+</p>
+
+    <div id="list" class="grid gap-4"></div>
 
 
-<!-- signup -->
-<div class="min-h-screen bg-cover bg-center flex items-center justify-center">
-  <!-- Signup Card -->
-  <div class="bg-white/70 backdrop-blur-md p-8 rounded-lg shadow-lg w-full max-w-md">
-    <!-- Heading -->
-    <h2 class="text-2xl font-bold text-blue-500 mb-2 text-center">Create an Account</h2>
-    <p class="text-gray-600 mb-6 text-center">Join Travello today and start your journey.</p>
-
-    <!-- Input Fields -->
-    <form>
-      <input type="text" placeholder="Full Name" class="w-full mb-4 px-4 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-pink-400">
-      <input type="email" placeholder="Email" class="w-full mb-4 px-4 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-pink-400">
-      <input type="password" placeholder="Password" class="w-full mb-4 px-4 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-pink-400">
-      <input type="password" placeholder="Confirm Password" class="w-full mb-6 px-4 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-pink-400">
-
-      <!-- Sign Up Button -->
-      <button class="w-full bg-blue-600 text-white font-semibold py-2 rounded">Sign Up</button>
-    </form>
-
-    <!-- Social Signup -->
-    <div class="flex items-center my-6">
-      <hr class="flex-grow border-gray-300">
-      <hr class="flex-grow border-gray-300">
-    </div>
-
-    <!-- Login Link -->
-    <p class="mt-6 text-gray-700 text-sm text-center">
-      Already have an account? 
-      <a href="login.html" class="text-blue-500 font-semibold hover:underline">Login</a>
-    </p>
-  </div>
 </div>
-
-
 
 
 
@@ -138,6 +116,8 @@
 
 
 
+<script src="booking.js"></script>
 
-</div>
+</body>
+
 </html>

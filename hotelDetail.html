@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Travello - Hotel Detail</title>
+  <!-- daisyui + tailwindcss cdn -->
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <!-- font awesome cdn -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"/>
+</head>
+<body class="relative max-w-[1400px] mx-auto">
+
+  <!-- Navbar -->
+  <header class="bg-white p-4 shadow-md text-black pl-5 pr-5">
+    <div class="container mx-auto flex items-center justify-between">
+      <div>
+        <img class="w-70" src="assets/logo.png" alt="">
+      </div>
+      <ul class="flex gap-10 text-black pt-3 pb-3">
+        <li class="hover:text-blue-500"><a href="index.html">Home</a></li>
+        <li class="hover:text-blue-500"><a href="package.html">Package</a></li>
+        <li class="hover:text-blue-500"><a href="booking.html">Booking</a></li>
+        <li class="hover:text-blue-500"><a href="hotel.html">Hotels</a></li>
+      </ul>
+      <ul class="flex justify-end gap-2">
+        <li><a href="login.html"><button class="btn hover:bg-blue-500 hover:text-white bg-white text-blue-500">Login</button></a></li>
+      </ul>
+    </div>
+  </header>
+
+  <!-- Hotel Detail Body -->
+  <div class="max-w-[1200px] mx-auto mt-15 mb-15">
+    <div class="flex gap-6 p-6">
+      <!-- Left Side -->
+      <div class="w-2/3">
+        <img id="hotel-image" class="w-full h-64 object-cover rounded-lg mb-4" alt="Hotel Image">
+        <h2 id="hotel-name" class="text-2xl font-bold text-blue-600 mb-2"></h2>
+        <p id="hotel-description" class="text-gray-700 mb-4"></p>
+        <p id="hotel-price" class="text-lg font-semibold text-orange-600 mb-4"></p>
+
+        <!-- Extra Info -->
+        <p class="mb-2"><b>Location:</b> <span id="hotel-location"></span></p>
+        <p class="mb-2"><b>Room Type:</b> <span id="hotel-room"></span></p>
+        <p class="mb-2"><b>Rating:</b> ⭐ <span id="hotel-rating"></span></p>
+        <p class="mb-2"><b>Availability:</b> <span id="hotel-availability"></span></p>
+      </div>
+
+      <!-- Right Side Booking Form -->
+      <div class="w-1/3 bg-gray-100 p-4 rounded-lg shadow-md">
+        <h3 class="text-xl font-bold mb-4">Book This Hotel</h3>
+        <form id="hotel-booking-form">
+          <input type="text" id="name" placeholder="Your Name" class="w-full mb-2 p-2 border rounded">
+          <input type="email" id="email" placeholder="Your Email" class="w-full mb-2 p-2 border rounded">
+          <input type="text" id="location" placeholder="Your Location" class="w-full mb-2 p-2 border rounded">
+          <input type="date" id="date" class="w-full mb-2 p-2 border rounded">
+          <input type="number" id="people" placeholder="Number of People" class="w-full mb-2 p-2 border rounded">
+
+          <p id="total-price" class="text-lg font-semibold text-orange-600 mb-4">Total: ৳ 0</p>
+
+          <button id="confirmHotelBooking" type="button" class="w-full bg-blue-500 text-white py-2 rounded">Confirm Booking</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- Booking Success Modal -->
+  <div id="hotelBookingModal" class="fixed inset-0 bg-black/50 hidden justify-center items-center z-50">
+    <div class="bg-white p-8 rounded-2xl shadow-2xl text-center w-[500px]">
+      <div class="text-6xl mb-4">
+        <i class="fas fa-check-circle text-green-500"></i>
+      </div>
+      <h2 class="text-2xl font-bold text-green-600 mb-2">Booking Confirmed!</h2>
+      <p class="text-gray-600 mb-6">Your hotel has been booked successfully.</p>
+      <button id="closeHotelModal" class="bg-blue-400 text-white hover:bg-blue-800 px-6 py-2 rounded-lg">OK</button>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer sm:footer-horizontal bg-base-300 text-base-content p-10">
+    <nav>
+      <h6 class="footer-title">Services</h6>
+      <a class="link link-hover">Branding</a>
+      <a class="link link-hover">Design</a>
+      <a class="link link-hover">Marketing</a>
+      <a class="link link-hover">Advertisement</a>
+    </nav>
+    <nav>
+      <h6 class="footer-title">Company</h6>
+      <a class="link link-hover">About us</a>
+      <a class="link link-hover">Contact</a>
+      <a class="link link-hover">Jobs</a>
+      <a class="link link-hover">Press kit</a>
+    </nav>
+    <nav>
+      <h6 class="footer-title">Social</h6>
+      <div class="grid grid-flow-col gap-4">
+        <a><i class="fab fa-facebook"></i></a>
+        <a><i class="fab fa-twitter"></i></a>
+        <a><i class="fab fa-instagram"></i></a>
+      </div>
+    </nav>
+  </footer>
+
+  <script src="hotelDetail.js"></script>
+</body>
+</html>

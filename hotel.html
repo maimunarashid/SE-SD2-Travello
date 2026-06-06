@@ -22,10 +22,10 @@
         </div>
 
         <ul class="flex gap-10 text-black pt-3 pb-3 pl-5 pr-5 rounded-1 transition duration-300 ease-in-out">
-            <li  class="hover:text-blue-500"><a href="index.html">Home</a></li>
-            <li  class="hover:text-blue-500"><a href="package.html">Package</a></li>
-            <li  class="hover:text-blue-500"><a href="booking.html">Booking</a></li>
-            <li  class="hover:text-blue-500"><a href="hotels.html">Hotels</a></li>
+        <li class="hover:text-blue-500"><a href="index.html">Home</a></li>
+        <li class="hover:text-blue-500"><a href="package.html">Packages</a></li>
+        <li class="hover:text-blue-500"><a href="booking.html">Booking</a></li>
+        <li class="hover:text-blue-500"><a href="hotel.html">Hotels</a></li>
         </ul>
         <ul class="flex justify-end gap-2">
             <li><a href="login.html"><button class="btn hover:bg-blue-500 hover:text-white bg-white text-blue-500">Login</button></a></li>
@@ -35,13 +35,10 @@
 </header>
 
 <!-- inside body -->
-<div class="max-w-[1200px] mx-auto mt-15 mb-15">
- 
+<div class="flex flex-col mt-15 mb-15 items mx-auto max-w-[1200px]">
 
-<div class="max-w-7xl mx-auto p-6">
-
-  <h1 class="text-4xl font-bold mb-6">
-    Hotels
+  <h1 class="text-2xl font-bold mb-6 text-center text-gray-500 bg-gray-200 py-4 rounded">
+    Find Your Hotels
   </h1>
 
   <div class="grid md:grid-cols-4 gap-6">
@@ -50,7 +47,7 @@
 
     <div class="bg-white p-5 rounded-xl shadow h-fit">
 
-      <h2 class="font-bold text-xl mb-4">
+      <h2 class="font-bold text-xl mb-6 text-gray-500">
         Locations
       </h2>
 
@@ -58,7 +55,7 @@
 
         <li>
           <button
-            class="filter-btn w-full text-left hover:text-blue-600"
+            class="filter-btn w-full text-left hover:bg-blue-400 rounded-lg p-4 mb-4 bg-blue-100 rounded-lg p-4 mb-4"
             data-location="all">
             All
           </button>
@@ -66,7 +63,7 @@
 
         <li>
           <button
-            class="filter-btn w-full text-left hover:text-blue-600"
+            class="filter-btn w-full text-left hover:bg-blue-400 bg-blue-100 rounded-lg p-4 mb-4"
             data-location="Bandarban">
             Bandarban
           </button>
@@ -74,7 +71,7 @@
 
         <li>
           <button
-            class="filter-btn w-full text-left hover:text-blue-600"
+            class="filter-btn w-full text-left hover:bg-blue-400 bg-blue-100 rounded-lg p-4 mb-4"
             data-location="Khagrachari">
             Khagrachari
           </button>
@@ -82,7 +79,7 @@
 
         <li>
           <button
-            class="filter-btn w-full text-left hover:text-blue-600"
+            class="filter-btn w-full text-left hover:bg-blue-400 bg-blue-100 rounded-lg p-4 mb-4"
             data-location="Rangamati">
             Rangamati
           </button>
@@ -90,7 +87,7 @@
 
         <li>
           <button
-            class="filter-btn w-full text-left hover:text-blue-600"
+            class="filter-btn w-full text-left hover:bg-blue-400 bg-blue-100 rounded-lg p-4 mb-4"
             data-location="Cox's Bazar">
             Cox's Bazar
           </button>
@@ -104,12 +101,10 @@
 
     <div
       id="hotelContainer"
-      class="md:col-span-3 space-y-5">
+      class="md:col-span-3 space-y-5 flex flex-col space-x-10">
     </div>
 
   </div>
-
-</div>
 
 </div>
 

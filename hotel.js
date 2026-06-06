@@ -34,28 +34,28 @@ function renderHotels(hotelList) {
 
   hotelList.forEach(hotel => {
     hotelContainer.innerHTML += `
-      <div class="bg-white rounded-xl shadow-md overflow-hidden">
-        <div class="flex flex-col md:flex-row">
-          <img src="${hotel.image}" class="w-full md:w-72 h-56 object-cover" alt="${hotel.name}">
-          <div class="p-5 flex-1">
-            <h2 class="text-2xl font-bold mb-2">${hotel.name}</h2>
-            <p class="text-gray-500 mb-2">📍 ${hotel.location}</p>
-            <p class="text-gray-600 mb-3">${hotel.description}</p>
-            <p class="mb-1"><b>Room:</b> ${hotel.roomType}</p>
-            <p class="mb-1"><b>Rating:</b> ⭐ ${hotel.rating}</p>
-            <p class="mb-1 text-blue-600 font-bold">৳${hotel.price}</p>
+      <div class="bg-white rounded-xl shadow-md pr-20">
+        <div class="flex flex-col md:flex-row items-center">
+          <img src="${hotel.image}" class="w-full md:w-72 h-56 object-cover rounded-lg ml-4 mr-20" alt="${hotel.name}">
+          <div class="pt-8 pb-8 pl-4 pr-15 flex-1">
+            <h2 class="text-2xl font-bold mb-2 text-gray-500">${hotel.name}</h2>
+            <p class="text-gray-500 mb-2">${hotel.location}</p>
             <p class="mb-3">
               ${
-                hotel.availability
-                  ? `<span class="text-green-600 font-semibold">Available</span>`
-                  : `<span class="text-red-600 font-semibold">Not Available</span>`
+               hotel.availability
+  ? `<span class="text-green-600 font-semibold">Available</span>`
+  : `<span class="text-red-600 font-semibold">Not Available</span>`
+
               }
+                  
             </p>
+            <p class="mb-1 bg-gray-100 text-blue-800 py-1 rounded-lg">Price Per Night ৳${hotel.price}</p>
+            <p class="mb-1 text-gray-500"><b>Room:</b> ${hotel.roomType}</p>
+            <p class="mb-1 text-gray-500"><b>Rating:</b> ⭐ ${hotel.rating}</p>
             <div class="flex gap-3">
-              <button onclick="viewDetails(${hotel.id})" class="bg-gray-700 text-white px-4 py-2 rounded-lg">View Details</button>
               ${
                 hotel.availability
-                  ? `<button onclick="bookHotel(${hotel.id})" class="bg-blue-600 text-white px-4 py-2 rounded-lg">Book Now</button>`
+                  ? `<button onclick="bookHotel(${hotel.id})" class="bg-blue-400 text-white px-4 py-2 rounded-lg mt-3">View Details</button>`
                   : ""
               }
             </div>

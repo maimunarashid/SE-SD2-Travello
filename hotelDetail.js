@@ -1,83 +1,135 @@
-// Get hotel id
-const urlParams = new URLSearchParams(window.location.search);
-const hotelId = urlParams.get('id');
+document.addEventListener("DOMContentLoaded", () => {
+  const hotel = JSON.parse(localStorage.getItem("selectedHotel"));
+  if (!hotel) {
+    window.location.href = "hotel.html";
+    return;
+  }
 
-fetch('hotel.json')
-  .then(res => res.json())
-  .then(data => {
-    const hotel = data.find(h => h.id == hotelId);
+  // Fill hotel details
+  document.getElementById("hotel-name").textContent = hotel.name;
+  document.getElementById("hotel-description").textContent = hotel.description;
+  document.getElementById("hotel-price").textContent = `৳ ${hotel.price} per room`;
+  document.getElementById("hotel-image").src = hotel.image;
+  document.getElementById("hotel-location").textContent = hotel.location;
+  document.getElementById("hotel-room").textContent = hotel.roomType;
+  document.getElementById("hotel-rating").textContent = hotel.rating;
 
-    if (!hotel) {
-      alert("Hotel not found!");
+  // Availability check
+  let isAvailable = false; // flag
+
+  document.getElementById("checkAvailability").addEventListener("click", () => {
+    const rooms = document.getElementById("rooms").value;
+    const date = document.getElementById("date").value;
+
+    if (!rooms || !date) {
+      alert("Please enter rooms and date");
       return;
     }
 
-    // ===== FILL DATA =====
-    document.getElementById('hotel-name').textContent = hotel.name;
-    document.getElementById('hotel-description').textContent = hotel.description;
-    document.getElementById('hotel-price').textContent = `৳ ${hotel.price} per night`;
-    document.getElementById('hotel-image').src = hotel.image;
+    const selectedDate = new Date(date);
+    const fromDate = new Date(hotel.available_from);
+    const toDate = new Date(hotel.available_to);
 
-    document.getElementById('hotel-location').textContent = hotel.location;
-    document.getElementById('hotel-room').textContent = hotel.roomType;
-    document.getElementById('hotel-rating').textContent = hotel.rating;
-    document.getElementById('hotel-availability').textContent =
-      hotel.availability ? "Available" : "Not Available";
+    if (
+      selectedDate >= fromDate &&
+      selectedDate <= toDate &&
+      rooms <= hotel.max_rooms
+    ) {
+      document.getElementById("availability-status").textContent =
+        "✅ Rooms are available!";
+      const total = hotel.price * rooms;
+      document.getElementById("total-price").textContent = `Total: ৳ ${total}`;
+      isAvailable = true;
+    } else {
+      // show modal with info
+      const infoModal = document.getElementById("hotelInfoModal");
+      infoModal.querySelector("#infoText").innerHTML = `
+        Booking is only available from <b>${hotel.available_from}</b> 
+        to <b>${hotel.available_to}</b>.<br>
+        Maximum rooms: <b>${hotel.max_rooms}</b>.
+      `;
+      infoModal.classList.remove("hidden");
+      infoModal.classList.add("flex");
 
-    // ===== AMENITIES =====
-    let amenitiesHTML = `
-      <ul class="list-disc pl-5 text-gray-600 space-y-2">
-        ${hotel.amenities.map(a => `<li>${a}</li>`).join("")}
-      </ul>
-    `;
-    document.getElementById('hotel-amenities').innerHTML = amenitiesHTML;
-
-    // ===== PRICE CALC =====
-    const peopleInput = document.getElementById('people');
-    peopleInput.addEventListener('input', () => {
-      const total = hotel.price * peopleInput.value;
-      document.getElementById('total-price').textContent = `Total: ৳ ${total}`;
-    });
-
-    // ===== BOOKING SYSTEM =====
-    const confirmBtn = document.getElementById("confirmHotelBooking");
-    const modal = document.getElementById("hotelBookingModal");
-    const closeBtn = document.getElementById("closeHotelModal");
-
-    confirmBtn.addEventListener("click", (e) => {
-      e.preventDefault();
-
-      const people = document.getElementById("people").value;
-      const date = document.getElementById("date").value;
-
-      if (!people || !date) {
-        alert("Please fill all fields");
-        return;
-      }
-
-      const booking = {
-        id: hotel.id,
-        name: hotel.name,
-        image: hotel.image,
-        price: hotel.price,
-        people: Number(people),
-        date,
-        total: hotel.price * people,
-        status: "pending",
-        service: "Hotel"
+      document.getElementById("closeInfoModal").onclick = () => {
+        infoModal.classList.add("hidden");
+        infoModal.classList.remove("flex");
       };
 
-      let bookings = JSON.parse(localStorage.getItem("bookings")) || [];
-      bookings.push(booking);
-      localStorage.setItem("bookings", JSON.stringify(bookings));
-
-      modal.classList.remove("hidden");
-      modal.classList.add("flex");
-    });
-
-    closeBtn.addEventListener("click", () => {
-      modal.classList.remove("flex");
-      modal.classList.add("hidden");
-      window.location.href = "booking.html";
-    });
+      document.getElementById("availability-status").textContent =
+        "❌ Not available for selected date/rooms";
+      document.getElementById("total-price").textContent = "Total: ৳ 0";
+      isAvailable = false;
+    }
   });
+
+  // Confirm booking
+  document.getElementById("confirmHotelBooking").addEventListener("click", () => {
+    const rooms = document.getElementById("rooms").value;
+    const date = document.getElementById("date").value;
+
+    if (!rooms || !date) {
+      alert("Please fill all fields");
+      return;
+    }
+
+    if (!isAvailable) {
+      alert("Please check availability first!");
+      return;
+    }
+
+    const booking = {
+      id: hotel.id,
+      name: hotel.name,
+      date,
+      rooms: Number(rooms),
+      total: hotel.price * rooms,
+      status: "Pending",
+      service: "Hotel"
+    };
+
+    let bookings = JSON.parse(localStorage.getItem("bookings")) || [];
+    bookings.push(booking);
+    localStorage.setItem("bookings", JSON.stringify(bookings));
+
+    // Show confirmed modal
+    const confirmModal = document.getElementById("hotelBookingModal");
+    confirmModal.classList.remove("hidden");
+    confirmModal.classList.add("flex");
+
+    document.getElementById("closeHotelModal").onclick = () => {
+      window.location.href = "booking.html";
+    };
+  });
+});
+
+
+
+
+// map
+function initMap(hotel) {
+  const hotelLocation = [hotel.latitude, hotel.longitude];
+
+  const map = L.map('map').setView(hotelLocation, 13);
+
+  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: '© OpenStreetMap contributors'
+  }).addTo(map);
+
+  // হোটেল marker
+  L.marker(hotelLocation).addTo(map)
+    .bindPopup(`<b>${hotel.name}</b><br>${hotel.location}`)
+    .openPopup();
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+  const hotel = JSON.parse(localStorage.getItem("selectedHotel"));
+  if (!hotel) {
+    window.location.href = "hotel.html";
+    return;
+  }
+
+  // হোটেল details দেখানোর পর ম্যাপ লোড করো
+  initMap(hotel);
+});
+

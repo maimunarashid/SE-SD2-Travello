@@ -10,12 +10,12 @@
     <!-- font awesome cdn -->
      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
-
-
-
 <body class="relative max-w-[1400px] mx-auto">
+
+  
     <!-- navbar -->
  <header class="bg-white p-4 shadow-md text-black pl-5 pr-5">
+
     <div class="container mx-auto flex items-center justify-between">
         <div>
             <img class="w-70" src="assets/logo.png" alt="">
@@ -26,6 +26,15 @@
         <li class="hover:text-blue-500"><a href="package.html">Packages</a></li>
         <li class="hover:text-blue-500"><a href="booking.html">Booking</a></li>
         <li class="hover:text-blue-500"><a href="hotel.html">Hotels</a></li>
+              <!-- Transport Dropdown -->
+      <li class="relative">
+        <button id="transportBtn" class="hover:text-blue-500">Transports</button>
+        <ul id="transportMenu" class="absolute hidden bg-gray-100 shadow-md mt-2 rounded w-40 z-50">
+          <li><a href="flight.html" class="block px-4 py-2 hover:bg-blue-200">Flights</a></li>
+          <li><a href="bus.html" class="block px-4 py-2 hover:bg-blue-200">Bus</a></li>
+          <li><a href="train.html" class="block px-4 py-2 hover:bg-blue-200">Train</a></li>
+        </ul>
+      </li>
         </ul>
         <ul class="flex justify-end gap-2">
             <li><a href="login.html"><button class="btn hover:bg-blue-500 hover:text-white bg-white text-blue-500">Login</button></a></li>
@@ -33,6 +42,7 @@
 
       </div>
 </header>
+
 
 <!-- inside body -->
 <div class="flex flex-col mt-15 mb-15 items mx-auto max-w-[1200px]">
@@ -166,5 +176,23 @@
 </footer>
 
 <script src="hotel.js"></script>
+<!-- transport er dropdown k control korbe -->
+ <script>
+  const transportBtn = document.getElementById("transportBtn");
+  const transportMenu = document.getElementById("transportMenu");
+
+  // Toggle dropdown on click
+  transportBtn.addEventListener("click", () => {
+    transportMenu.classList.toggle("hidden");
+  });
+
+  // Hide dropdown when clicking outside
+  window.addEventListener("click", (e) => {
+    if (!transportBtn.contains(e.target) && !transportMenu.contains(e.target)) {
+      transportMenu.classList.add("hidden");
+    }
+  });
+</script>
+
 </body>
 </html>

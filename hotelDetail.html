@@ -1,36 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Travello - Hotel Detail</title>
-  <!-- daisyui + tailwindcss cdn -->
-  <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
-  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-  <!-- font awesome cdn -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"/>
-<!-- leaflet css -->
-  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travello</title>
+    <!--daisyui + tailwindcss cdn -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <!-- font awesome cdn -->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body class="relative max-w-[1400px] mx-auto">
 
-  <!-- Navbar -->
-  <header class="bg-white p-4 shadow-md text-black pl-5 pr-5">
+  
+    <!-- navbar -->
+ <header class="bg-white p-4 shadow-md text-black pl-5 pr-5">
+
     <div class="container mx-auto flex items-center justify-between">
-      <div>
-        <img class="w-70" src="assets/logo.png" alt="">
-      </div>
-      <ul class="flex gap-10 text-black pt-3 pb-3">
+        <div>
+            <img class="w-70" src="assets/logo.png" alt="">
+        </div>
+
+        <ul class="flex gap-10 text-black pt-3 pb-3 pl-5 pr-5 rounded-1 transition duration-300 ease-in-out">
         <li class="hover:text-blue-500"><a href="index.html">Home</a></li>
         <li class="hover:text-blue-500"><a href="package.html">Packages</a></li>
         <li class="hover:text-blue-500"><a href="booking.html">Booking</a></li>
         <li class="hover:text-blue-500"><a href="hotel.html">Hotels</a></li>
-      </ul>
-      <ul class="flex justify-end gap-2">
-        <li><a href="login.html"><button class="btn hover:bg-blue-500 hover:text-white bg-white text-blue-500">Login</button></a></li>
-      </ul>
-    </div>
-  </header>
+              <!-- Transport Dropdown -->
+      <li class="relative">
+        <button id="transportBtn" class="hover:text-blue-500">Transports</button>
+        <ul id="transportMenu" class="absolute hidden bg-gray-100 shadow-md mt-2 rounded w-40 z-50">
+          <li><a href="flight.html" class="block px-4 py-2 hover:bg-blue-200">Flights</a></li>
+          <li><a href="bus.html" class="block px-4 py-2 hover:bg-blue-200">Bus</a></li>
+          <li><a href="train.html" class="block px-4 py-2 hover:bg-blue-200">Train</a></li>
+        </ul>
+      </li>
+        </ul>
+        <ul class="flex justify-end gap-2">
+            <li><a href="login.html"><button class="btn hover:bg-blue-500 hover:text-white bg-white text-blue-500">Login</button></a></li>
+          </ul>
+
+      </div>
+</header>
 
   <!-- Hotel Detail Body -->
   <div class="max-w-[1200px] mx-auto mt-15 mb-15">
@@ -125,5 +136,23 @@
   </footer>
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
   <script src="hotelDetail.js"></script>
+  <!-- transport er dropdown k control korbe -->
+ <script>
+  const transportBtn = document.getElementById("transportBtn");
+  const transportMenu = document.getElementById("transportMenu");
+
+  // Toggle dropdown on click
+  transportBtn.addEventListener("click", () => {
+    transportMenu.classList.toggle("hidden");
+  });
+
+  // Hide dropdown when clicking outside
+  window.addEventListener("click", (e) => {
+    if (!transportBtn.contains(e.target) && !transportMenu.contains(e.target)) {
+      transportMenu.classList.add("hidden");
+    }
+  });
+</script>
+
 </body>
 </html>

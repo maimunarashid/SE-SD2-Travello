@@ -47,7 +47,7 @@
 
 
     <!-- banner section -->
-<div class="relative w-full h-[400px] overflow-hidden mb-20">
+<div class="relative w-full h-[400px] mb-20">
   <!-- Background Video -->
   <video autoplay muted loop playsinline class="absolute inset-0 w-full h-full object-cover">
     <source src="assets/banner.mp4" type="video/mp4">
@@ -58,6 +58,53 @@
     <h2 class="text-white text-3xl font-bold px-4 py-2 rounded">Welcome to Travello!</h2>
     <p class="text-white font-bold">Discover the beauty of Chittagong with curated tours, stays, and travel assistance.</p>
   </div>
+
+  <!-- Search Panel -->
+   <div class="absolute bottom-[-60px] left-1/2 -translate-x-1/2 w-[90%] max-w-6xl bg-white rounded-2xl shadow-2xl p-6 z-50">
+
+  <div class="grid md:grid-cols-5 gap-4">
+
+    <select id="searchType"
+      class="select select-bordered w-full">
+
+      <option value="package">Package</option>
+      <option value="hotel">Hotel</option>
+      <option value="flight">Flight</option>
+      <option value="bus">Bus</option>
+      <option value="train">Train</option>
+
+    </select>
+
+    <input
+      id="searchLocation"
+      type="text"
+      placeholder="Destination / Location"
+      class="input input-bordered w-full">
+
+    <input
+      id="searchDate"
+      type="date"
+      class="input input-bordered w-full">
+
+    <input
+      id="searchBudget"
+      type="number"
+      placeholder="Max Budget"
+      class="input input-bordered w-full">
+
+    <button
+      id="searchBtn"
+      class="btn bg-blue-500 text-white hover:bg-blue-700">
+
+      Search
+
+    </button>
+
+  </div>
+
+</div>
+<!-- search box done -->
+
 </div>
 
 
@@ -68,7 +115,7 @@
 <!-- ----------------------------------------------------------------------------------------- -->
 <!-- inside body -->
 <!-- explore -->
-<div class="max-w-[1200px] mx-auto pt-10 pb-10">
+<div class="max-w-[1200px] mx-auto pt-28 pb-10">
 
  <div class="flex flex-col items-center">
   <h1 class="text-3xl font-bold text-gray-400">Explore Chittagong</h1>
@@ -270,5 +317,55 @@ class="hidden fixed bottom-24 right-6 w-[350px] bg-white rounded-2xl shadow-2xl 
   });
 </script>
 
+
+<!-- search box er js -->
+ <script>
+document
+.getElementById("searchBtn")
+.addEventListener("click", () => {
+
+  const type =
+  document.getElementById("searchType").value;
+
+  const location =
+  document.getElementById("searchLocation").value;
+
+  const date =
+  document.getElementById("searchDate").value;
+
+  const budget =
+  document.getElementById("searchBudget").value;
+
+  localStorage.setItem(
+    "globalSearch",
+    JSON.stringify({
+      location,
+      date,
+      budget
+    })
+  );
+
+  if(type === "package"){
+    window.location.href = "package.html";
+  }
+
+  if(type === "hotel"){
+    window.location.href = "hotel.html";
+  }
+
+  if(type === "flight"){
+    window.location.href = "flight.html";
+  }
+
+  if(type === "bus"){
+    window.location.href = "bus.html";
+  }
+
+  if(type === "train"){
+    window.location.href = "train.html";
+  }
+
+});
+</script>
 </body>
 </html>   

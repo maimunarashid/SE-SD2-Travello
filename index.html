@@ -92,13 +92,15 @@
       placeholder="Max Budget"
       class="input input-bordered w-full">
 
-    <button
-      id="searchBtn"
-      class="btn bg-blue-500 text-white hover:bg-blue-700">
 
-      Search
+      <button
+  id="searchBtn"
+  type="button"
+  class="btn bg-blue-500 text-white hover:bg-blue-700">
+  Search
+</button>
 
-    </button>
+
 
   </div>
 
@@ -320,50 +322,53 @@ class="hidden fixed bottom-24 right-6 w-[350px] bg-white rounded-2xl shadow-2xl 
 
 <!-- search box er js -->
  <script>
-document
-.getElementById("searchBtn")
-.addEventListener("click", () => {
+document.addEventListener("DOMContentLoaded", () => {
 
-  const type =
-  document.getElementById("searchType").value;
+  const btn = document.getElementById("searchBtn");
 
-  const location =
-  document.getElementById("searchLocation").value;
+  btn.addEventListener("click", () => {
 
-  const date =
-  document.getElementById("searchDate").value;
+    const type = document.getElementById("searchType").value;
+    const location = document.getElementById("searchLocation").value;
+    const date = document.getElementById("searchDate").value;
+    const budget = document.getElementById("searchBudget").value;
 
-  const budget =
-  document.getElementById("searchBudget").value;
-
-  localStorage.setItem(
-    "globalSearch",
-    JSON.stringify({
+    const searchData = {
+      type,
       location,
       date,
       budget
-    })
-  );
+    };
 
-  if(type === "package"){
-    window.location.href = "package.html";
-  }
+    localStorage.setItem(
+      "globalSearch",
+      JSON.stringify(searchData)
+    );
 
-  if(type === "hotel"){
-    window.location.href = "hotel.html";
-  }
+    // redirect
+    switch(type) {
+      case "package":
+        window.location.href = "package.html";
+        break;
 
-  if(type === "flight"){
-    window.location.href = "flight.html";
-  }
+      case "hotel":
+        window.location.href = "hotel.html";
+        break;
 
-  if(type === "bus"){
-    window.location.href = "bus.html";
-  }
+      case "flight":
+        window.location.href = "flight.html";
+        break;
 
-  if(type === "train"){
-    window.location.href = "train.html";
-  }
+      case "bus":
+        window.location.href = "bus.html";
+        break;
+
+      case "train":
+        window.location.href = "train.html";
+        break;
+    }
+
+  });
 
 });
 </script>

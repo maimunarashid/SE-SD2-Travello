@@ -1,0 +1,67 @@
+[
+  {
+    "id": 1,
+    "origin": "Chittagong",
+    "destination": "Dhaka",
+    "bus_name": "Green Line",
+    "departure_date": "2026-06-10",
+    "departure_time": "08:00",
+    "arrival_time": "14:00",
+    "duration": "6h",
+    "seats_available": 20,
+    "class": "AC",
+    "price_bdt": 1200
+  },
+  {
+    "id": 2,
+    "origin": "Chittagong",
+    "destination": "Cox's Bazar",
+    "bus_name": "Hanif Enterprise",
+    "departure_date": "2026-06-11",
+    "departure_time": "09:00",
+    "arrival_time": "13:00",
+    "duration": "4h",
+    "seats_available": 15,
+    "class": "AC",
+    "price_bdt": 900
+  },
+  {
+    "id": 3,
+    "origin": "Chittagong",
+    "destination": "Sylhet",
+    "bus_name": "Shohag Paribahan",
+    "departure_date": "2026-06-12",
+    "departure_time": "07:00",
+    "arrival_time": "15:00",
+    "duration": "8h",
+    "seats_available": 0,
+    "class": "Non-AC",
+    "price_bdt": 700
+  },
+  {
+    "id": 4,
+    "origin": "Dhaka",
+    "destination": "Chittagong",
+    "bus_name": "Saintmartin Paribahan",
+    "departure_date": "2026-06-13",
+    "departure_time": "10:00",
+    "arrival_time": "16:00",
+    "duration": "6h",
+    "seats_available": 12,
+    "class": "AC",
+    "price_bdt": 1100
+  },
+  {
+    "id": 5,
+    "origin": "Chittagong",
+    "destination": "Bandarban",
+    "bus_name": "Dolphin",
+    "departure_date": "2026-06-14",
+    "departure_time": "06:00",
+    "arrival_time": "09:00",
+    "duration": "3h",
+    "seats_available": 25,
+    "class": "Non-AC",
+    "price_bdt": 500
+  }
+]

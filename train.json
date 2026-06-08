@@ -1,0 +1,67 @@
+[
+  {
+    "id": 1,
+    "origin": "Chittagong",
+    "destination": "Dhaka",
+    "train_name": "Subarna Express",
+    "departure_date": "2026-06-10",
+    "departure_time": "07:00",
+    "arrival_time": "12:30",
+    "duration": "5h 30m",
+    "seats_available": 40,
+    "class": "AC Chair",
+    "price_bdt": 850
+  },
+  {
+    "id": 2,
+    "origin": "Chittagong",
+    "destination": "Dhaka",
+    "train_name": "Turna Express",
+    "departure_date": "2026-06-11",
+    "departure_time": "22:00",
+    "arrival_time": "05:00",
+    "duration": "7h",
+    "seats_available": 25,
+    "class": "Sleeper",
+    "price_bdt": 1200
+  },
+  {
+    "id": 3,
+    "origin": "Dhaka",
+    "destination": "Chittagong",
+    "train_name": "Mohanagar Express",
+    "departure_date": "2026-06-12",
+    "departure_time": "08:00",
+    "arrival_time": "13:30",
+    "duration": "5h 30m",
+    "seats_available": 0,
+    "class": "AC Chair",
+    "price_bdt": 900
+  },
+  {
+    "id": 4,
+    "origin": "Chittagong",
+    "destination": "Sylhet",
+    "train_name": "Paharika Express",
+    "departure_date": "2026-06-13",
+    "departure_time": "06:30",
+    "arrival_time": "13:00",
+    "duration": "6h 30m",
+    "seats_available": 15,
+    "class": "Shovon",
+    "price_bdt": 700
+  },
+  {
+    "id": 5,
+    "origin": "Chittagong",
+    "destination": "Mymensingh",
+    "train_name": "Bijoy Express",
+    "departure_date": "2026-06-14",
+    "departure_time": "08:00",
+    "arrival_time": "15:00",
+    "duration": "7h",
+    "seats_available": 18,
+    "class": "AC Chair",
+    "price_bdt": 950
+  }
+]
